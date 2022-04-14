@@ -61,12 +61,9 @@ class BStat {
             this -> defend += 2;
         }
         void Rating() {
-            cout << "contact : " << contact << endl;
-            cout << "power : " << power << endl;
-            cout << "eye : " << eye << endl;
-            cout << "speed : " << speed<< endl;
-            cout << "focus : " << focus << endl;
-            cout << "defend : " << defend << endl;
+            cout << "contact : " << contact << " power : " << power << endl;
+            cout << "eye : " << eye << "     speed : " << speed << endl;
+            cout << "focus : " << focus << "   defend : " << defend << "\n\n" << endl;
         }
 };
 
