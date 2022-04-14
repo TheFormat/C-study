@@ -75,7 +75,7 @@ class Batter {
 class PlayersList {
     
     private :
-        Batter player[25];
+        public: Batter player[25];
         int player_list_size = 0;
         
         void addPlayer(string name, int first_point) {
@@ -91,7 +91,7 @@ class PlayersList {
         
         void showStat() {
             for(int i = 0; i < player_list_size; ++i) {
-                player[player_list_size].Rating();
+                player[i].Rating();
             }
         }
     
@@ -100,16 +100,9 @@ class PlayersList {
 void magicfunction() {
     
     PlayersList Movings;
-    
     Movings.setList();
     Movings.showStat();
-    
-    /*BattingStat Alex;
-    Alex.first(300);
-    Alex.Rating();
-    Alex.Fungo();
-    Alex.Rating(); */
-    
+
 }
 
 
