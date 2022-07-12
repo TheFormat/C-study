@@ -120,10 +120,33 @@ class PlayersList {
             
         }
         
-        void showPlayer() {
+        void showPlayerList() {
             for(int i = 0; i < player_list_size; ++i) {
                 player[i].Rating();
             }
+        }
+        void trainPlayer(int batternum, int trainingnum) {
+            switch(trainingnum) {
+                case 1 :
+                    player[batternum-1].Contact();
+                    break;
+                case 2 :
+                    player[batternum-1].Muscle();
+                    break;
+                case 3 :
+                    player[batternum-1].Medit();
+                    break;
+                case 4 :
+                    player[batternum-1].Run();
+                    break;
+                case 5 :
+                    player[batternum-1].Fungo();
+                    break;
+            }
+        }
+        
+        void showPlayer(int batternum) {
+            player[batternum-1].Rating();
         }
     
 };
@@ -132,7 +155,9 @@ void magicfunction() {
     
     PlayersList Movings;
     Movings.setList();
-    Movings.showPlayer();
+    Movings.showPlayerList();
+    Movings.trainPlayer(1,1);
+    Movings.showPlayer(1);
 
 }
 
